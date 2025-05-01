@@ -1,0 +1,108 @@
+@use '../abstracts/variables' as *;
+.submit-button, .reg-button {
+  background-color: 	var(--color-primary);
+  border: none;
+  border-radius: $border-radius;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button {
+  height: 50px;
+  padding: 0 16px;
+  min-width: 100px;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;     
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+}
+
+.submit-button:hover,
+.reg-button:hover {
+  background-color: rgba(240, 187, 11, 0.801);
+}
+
+.reg-button {
+  height: 32px;
+  padding: 0 24px;
+  min-width: 150px;
+  text-align: center;     
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+}
+
+.log-button {
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: $border-radius;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  height: 32px;
+  padding: 0 24px;
+  
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;     
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+}
+
+.log-button:hover {
+  background-color: #4d545e81;
+}
+
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: black;
+}
+
+.primary:hover {
+  background-color: #fcd435ad;
+  color: black;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.secondary {
+  justify-content: flex-start;
+  background-color:  var(--color-background);
+  border: 1px solid #333;
+  color: var(--text-color);
+}
+
+.secondary:hover {
+  background-color: #2a2d369f;
+}
+.theme-toggle{
+  height: 26px;
+  width: 26px;
+}
+

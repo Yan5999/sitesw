@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as *;
+footer {
+  text-align: center;
+  background-color: var(--color-background);
+
+  color: var(--color-muted);
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+}

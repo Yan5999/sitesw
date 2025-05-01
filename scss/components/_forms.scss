@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+.login-form {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 24px;
+  max-width: 500px;
+}
+
+.input-field{
+  border: 1px solid #474d57;
+  border-radius: $border-radius;
+  background-color: var(--color-background);
+  height: 48px;
+  font-size: 16px;
+  color: var(--text-color);
+  outline: none;
+  padding: 0 16px;
+}
+
+.input-field {
+  flex: 1;
+}
+
+
+
+.input-field::placeholder {
+  color: var(--color-muted);
+}
+
+.input-field:focus {
+  border-color: var(--color-accent);
+}

@@ -1,0 +1,28 @@
+html[data-theme="dark"] {
+    --color-background: #181A20;
+    --text-color: #ffffff;
+    --color-primary: #FCD535;
+    --color-secondary: #4d545e;
+    --color-accent: #f0b90b;
+    --color-positive: #03a66d;
+    --color-negative: #cf304a;
+    --color-muted: #848e9c;
+    --color-thirdly: #1e2329;
+  }
+  
+html[data-theme="light"] {
+    --color-background: #ffffff;
+    --text-color: #181A20;
+    --color-primary: #f5c000;
+    --color-secondary: #cccccc;
+    --color-accent: #e6b800;
+    --color-positive: #008f5f;
+    --color-negative: #d94b4b;
+    --color-muted: #666666;
+    --color-thirdly: #f4f3f3;
+  }
+$border-radius: 6px;
+
+/*
+C:\Users\korop\OneDrive\Documents\University\ETI HTML\sitesw>sass --watch scss/main.scss:css/main.css
+*/

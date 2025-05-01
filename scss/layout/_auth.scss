@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+.login-container {
+  background-color: var(--color-background);
+
+  padding: 40px;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+  border: 1px solid #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 32px;
+  margin-top: -1px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+
+.footer2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.footer2 a {
+  color: #ffc72c;
+  text-decoration: none;
+}
+
+.footer2 a:hover {
+  color: #ffda73;
+}

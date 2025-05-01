@@ -1,40 +1,166 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="icon" type="image/png" href="binanceico.png">
+    <meta name="description" content="Авторизація на платформі Binance - найбільшій у світі біржі криптовалют за обсягом торгів">
+    <meta name="keywords" content="Binance, криптовалюта, авторизація, біткоїн, вхід, біржа">
+    <meta name="author" content="Yan">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Увійти | Binance">
+    <meta property="og:description" content="Увійдіть до свого облікового запису Binance - найбільшої біржі криптовалют у світі">
+    <meta property="og:image" content="https://example.com/binance-logo.jpg">
+    <meta property="og:url" content="https://example.com/login">
+    
+    <link rel="icon" type="image/png" href="img/binanceico.png">
     <title>Увійти | Binance</title>
- </head>
-<body>
-    <div class="login-container">
-        <a href="index.html" class="logo-link"><img class="label" src="binance.png" alt="Binance Image"></a>
-        <h2 class="title">Увійти</h2>
-        <label for="email" class="label">Ел. пошта/номер телефону</label>
-        <input type="text" id="email" class="input-field2" placeholder="Ел. адреса/телефон">
-        <button class="btn primary">Далі</button>
-        <div class="or">або</div>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        binance: {
+                            dark: '#181A20',
+                            card: '#1E2329',
+                            yellow: '#FCD535',
+                            yellowHover: '#F0B90B',
+                            gray: '#848E9C',
+                            input: '#2B3139',
+                            secondary: '#474D57',
+                            darkBorder: '#2C2F36' 
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+       
+        html[data-theme="dark"] {
+            --bg-color: #181A20;
+            --text-color: white;
+            --border-color: #2C2F36; 
+            --input-text-color: white;
+            --continue-text-color: white;
+            --divider-bg-color: #181A20; 
+        }
+
+        html[data-theme="light"] {
+            --bg-color: #ffffff;
+            --text-color: #181A20;
+            --border-color: #e2e8f0; 
+            --input-text-color: black; 
+            --continue-text-color: black; 
+            --divider-bg-color: #ffffff; 
+        }
         
-        <button class="btn secondary google">
-        <img src="https://cdn-icons-png.flaticon.com/512/2875/2875404.png" alt="Google" class="icon"> Продовжити з Google    
-        </button>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family:  'Arial', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .theme-card {
+            background-color: var(--bg-color);
+            border-color: var(--border-color);
+        }
+        
+        input {
+            color: var(--input-text-color) !important;
+            background-color: var(--bg-color);
+            border-color: var(--border-color);
+        }
+        
+        .continue-button {
+            color: var(--continue-text-color) ;
+            border-color: var(--border-color);
 
-        <button class="btn secondary apple">
-        <img src="https://cdn-icons-png.flaticon.com/512/179/179309.png " alt="Apple" class="icon"> Продовжити з Apple
-        </button>
+        }
+        
+        .divider-text {
+            background-color: var(--divider-bg-color) !important;
+        }
+    </style>
+    
+    
+    <script src="js/settings.js"></script>
+</head>
+<body>
+    <div class="fixed inset-0 flex items-center justify-center p-4">
+        <div class="theme-card border rounded-xl w-full max-w-md p-8">
+            <div class="text-left mb-6">
+                <a href="index.html" class="inline-block">
+                    <img class="h-16" src="img/binance.png" alt="Binance Logo">
+                </a>
+            </div>
+            
+            <h2 class="text-3xl font-bold text-left mb-4">Увійти</h2>
+            
+            <div class="space-y-4">
+                <div class="text-left">
+                    <label for="email" class="block text-sm mb-1">Ел. пошта/номер телефону</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Ел. адреса/телефон" 
+                        class="w-full  border rounded-md px-4 py-3 focus:border-binance-yellow focus:outline-none"
+                    >
+                </div>
+                
+                <button class="w-full bg-binance-yellow hover:bg-binance-yellowHover text-black font-medium py-3 px-4 rounded-md transition duration-200 mt-2">
+                    Далі
+                </button>
+                
+                <div class="relative my-4">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="border-t border-binance-darkBorder w-full"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="px-4 text-sm text-binance-gray divider-text">або</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-3">
+                    <button class="continue-button w-full flex items-center justify-start border rounded-md py-3 px-4 hover:bg-opacity-10 hover:bg-white transition duration-200">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2875/2875404.png" alt="Google" class="w-6 h-6 mr-6">
+                        <span class="flex-1 text-center continue-button">Продовжити з Google</span>
+                    
 
-        <button class="btn secondary telegram">
-        <img src="https://img.icons8.com/?size=256&id=63306&format=png" alt="Telegram" class="icon"> Продовжити з Telegram
-        </button>
-        <div class="footer2">
-            <a href="reg.html">Створити акаунт Binance</a>
+                    </button>
+                    
+                    <button class="continue-button w-full flex items-center justify-start border rounded-md py-3 px-4 hover:bg-opacity-10 hover:bg-white transition duration-200">
+                        <img src="https://cdn-icons-png.flaticon.com/512/179/179309.png" alt="Apple" class="w-6 h-6 mr-6">
+                        <span class="flex-1 text-center continue-button">Продовжити з Apple</span>
+                    </button>
+                    
+                    <button class="continue-button w-full flex items-center justify-start border rounded-md py-3 px-4 hover:bg-opacity-10 hover:bg-white transition duration-200">
+                        <img src="https://img.icons8.com/?size=256&id=63306&format=png" alt="Telegram" class="w-6 h-6 mr-6">
+                        <span class="flex-1 text-center continue-button">Продовжити з Telegram</span>
+                    </button>
+                </div>
+                
+                <div class="text-center mt-6">
+                    <a href="reg.html" class="text-binance-yellow hover:text-binance-yellowHover">
+                        Створити акаунт Binance
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <footer>
-        <p style="white-space: pre;">Файли cookie   Умови   Конфіденційність</p>
+
+    <footer class="fixed bottom-0 left-0 right-0 py-5 text-center">
+        <div class="flex justify-center space-x-6">
+            <a href="#" class="text-binance-gray hover:text-white transition-colors duration-200 px-2 py-1 rounded hover:bg-binance-secondary">Файли cookie</a>
+            <a href="#" class="text-binance-gray hover:text-white transition-colors duration-200 px-2 py-1 rounded hover:bg-binance-secondary">Умови</a>
+            <a href="#" class="text-binance-gray hover:text-white transition-colors duration-200 px-2 py-1 rounded hover:bg-binance-secondary">Конфіденційність</a>
+        </div>
     </footer>
 </body>
 </html>
