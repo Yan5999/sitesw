@@ -24,6 +24,22 @@
 
 
 
+.input-field::-webkit-input-placeholder {
+  color: var(--color-muted);
+}
+
+.input-field:-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.input-field::-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.input-field:-ms-input-placeholder {
+  color: var(--color-muted);
+}
+
 .input-field::placeholder {
   color: var(--color-muted);
 }

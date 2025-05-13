@@ -44,11 +44,17 @@ header {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .logo-link {
   display: flex;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 img {
@@ -60,6 +66,9 @@ img {
 .auth-buttons {
   display: flex;
   margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 nav {
@@ -67,6 +76,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 nav a {
@@ -93,13 +105,9 @@ footer {
   padding: 40px;
   max-width: 1150px;
   margin: 0 auto;
+  display: -ms-grid;
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    grid-template-columns: 1fr;
-  }
-}
 .left-section {
   margin-left: 0;
   max-width: 100%;
@@ -136,6 +144,37 @@ footer {
   background-color: rgba(76, 175, 80, 0.05);
 }
 
+@media (max-width: 768px) {
+  .text {
+    font-size: 36px;
+  }
+  .number {
+    font-size: 36px;
+  }
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  nav a {
+    font-size: 10px;
+  }
+  img {
+    height: 32px;
+    width: 60px;
+  }
+  .reg-button {
+    max-height: 16px;
+    max-width: 8px !important;
+    padding: 0 0px !important;
+    font-size: 10px !important;
+  }
+  .log-button {
+    max-height: 16px;
+    max-width: 8px;
+    padding: 0 24px;
+    font-size: 10px !important;
+    font-weight: 500;
+  }
+}
 .login-container {
   background-color: var(--color-background);
   padding: 40px;
@@ -146,6 +185,8 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -199,6 +240,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .submit-button:hover,
@@ -214,6 +258,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .log-button {
@@ -231,6 +278,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .log-button:hover {
@@ -307,6 +357,22 @@ footer {
   flex: 1;
 }
 
+.input-field::-webkit-input-placeholder {
+  color: var(--color-muted);
+}
+
+.input-field:-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.input-field::-moz-placeholder {
+  color: var(--color-muted);
+}
+
+.input-field:-ms-input-placeholder {
+  color: var(--color-muted);
+}
+
 .input-field::placeholder {
   color: var(--color-muted);
 }
@@ -320,6 +386,9 @@ footer {
   margin-bottom: 20px;
   border-bottom: 1px solid #2b3139;
   padding-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .tab {
@@ -359,6 +428,9 @@ footer {
 .coin-name {
   display: flex;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .coin-icon {

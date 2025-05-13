@@ -4,6 +4,9 @@
   margin-bottom: 20px;
   border-bottom: 1px solid #2b3139;
   padding-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .tab {
@@ -42,6 +45,9 @@
 .coin-name {
   display: flex;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 
 .coin-icon {
