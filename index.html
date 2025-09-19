@@ -1,82 +1,107 @@
 <!DOCTYPE html>
 <html lang="uk" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Купуйте та продавайте Bitcoin, Ethereum та інші криптовалюти на надійній біржі Binance. Торгуйте криптовалюти з низькою комісією.">
-    <meta name="keywords" content="криптовалюта, біткоїн, етеріум, біржа, торгівля, Binance, BTC, ETH, BNB, блокчейн">
-    <meta name="author" content="Yan">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Buy/Sell Bitcoin, Ether and Altcoins | Cryptocurrency Exchange | Binance">
-    <meta property="og:description" content="Купуйте та продавайте Bitcoin, Ethereum та інші криптовалюти на надійній біржі Binance.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.binancesiteofsw.com/">
-    <meta property="og:image" content="binance.png">
-    
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/png" href="img/binanceico.png">
-    <title>Buy/Sell Bitcoin, Ether and Altcoins | Cryptocurrency Exchange | Binance</title> 
-</head>
-<body>
-    <header>
-        <div class="header-container">
-          <a href="index.html" class="logo-link">
-            <img src="img/binance.png" alt="Binance Image">
-          </a>
-          <nav>
-            <a href="reg.html">Купівля криптовалют</a>
-            <a href="reg.html">Ринки</a>
-            <a href="reg.html">Торгівля</a>
-            <a href="reg.html">Ф'ючерси</a>
-            <a href="reg.html">Earn</a>
-            <a href="reg.html">Square</a>
-            <div class="auth-buttons">
-                <a href="log.html" class="log-button">Вхід</a>
-                <a href="reg.html" class="reg-button">Зареєструватися</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Купуйте та продавайте Bitcoin, Ethereum та інші криптовалюти на надійній біржі Binance. Торгуйте криптовалюти з низькою комісією."
+        />
+        <meta
+            name="keywords"
+            content="криптовалюта, біткоїн, етеріум, біржа, торгівля, Binance, BTC, ETH, BNB, блокчейн"
+        />
+        <meta name="author" content="Yan" />
+        <meta name="robots" content="index, follow" />
+
+        <meta
+            property="og:title"
+            content="Buy/Sell Bitcoin, Ether and Altcoins | Cryptocurrency Exchange | Binance"
+        />
+        <meta
+            property="og:description"
+            content="Купуйте та продавайте Bitcoin, Ethereum та інші криптовалюти на надійній біржі Binance."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.binancesiteofsw.com/" />
+        <meta property="og:image" content="binance.png" />
+
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon" type="image/png" href="img/binanceico.png" />
+        <title>
+            Buy/Sell Bitcoin, Ether and Altcoins | Cryptocurrency Exchange |
+            Binance
+        </title>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo-link">
+                    <img src="img/binance.png" alt="Binance Image" />
+                </a>
+                <nav>
+                    <a href="reg.html">Купівля криптовалют</a>
+                    <a href="reg.html">Ринки</a>
+                    <a href="reg.html">Торгівля</a>
+                    <a href="reg.html">Ф'ючерси</a>
+                    <a href="reg.html">Earn</a>
+                    <a href="reg.html">Square</a>
+                    <div class="auth-buttons">
+                        <a href="log.html" class="log-button">Вхід</a>
+                        <a href="reg.html" class="reg-button"
+                            >Зареєструватися</a
+                        >
+                    </div>
+
+                    <img
+                        id="theme-toggle"
+                        class="theme-toggle"
+                        src="img/moon.png"
+                        alt="Toggle Theme"
+                        style="cursor: pointer"
+                    />
+                    <script src="js/settings.js"></script>
+                </nav>
             </div>
-            
-            <img id="theme-toggle" class="theme-toggle" src="img/moon.png" alt="Toggle Theme" style="cursor: pointer;">
-            <script src="js/settings.js"></script>
-          </nav>
-        </div> 
-        
+        </header>
 
-    </header>
-
-    <div class="main-content">
-        <div class="left-section">
-            <div class="counter-section">
-                <div id="counter" class="number">0</div>
-                <script src="js/number.js"></script>
-                <div class="text">
-                    <p>КОРИСТУВАЧІВ</p>
-                    <p>ДОВІРЯЮТЬ</p>
-                    <p>НАМ</p>
+        <div class="main-content">
+            <div class="left-section">
+                <div class="counter-section">
+                    <div id="counter" class="number">0</div>
+                    <script src="js/number.js"></script>
+                    <div class="text">
+                        <p>КОРИСТУВАЧІВ</p>
+                        <p>ДОВІРЯЮТЬ</p>
+                        <p>НАМ</p>
+                    </div>
+                </div>
+                <div class="login-form">
+                    <input
+                        type="text"
+                        class="input-field"
+                        placeholder="Ел. пошта/номер телефону"
+                    />
+                    <a href="log.html" class="submit-button">Почати</a>
                 </div>
             </div>
-            <div class="login-form">
-                <input type="text" class="input-field" placeholder="Ел. пошта/номер телефону">
-               <a href="log.html" class="submit-button">Почати</a>
-              
-            </div>
-        </div>
-        <div class="right-section">
-            <div class="crypto-container">
-                <div class="tabs">
-                    <div class="tab active">Популярні криптовалюти</div>
+            <div class="right-section">
+                <div class="crypto-container">
+                    <div class="tabs">
+                        <div class="tab active">Популярні криптовалюти</div>
+                    </div>
+                    <table class="coin-table">
+                        <tbody>
+                            <script src="js/fetch.js"></script>
+                        </tbody>
+                    </table>
                 </div>
-                <table class="coin-table">
-                    <tbody>
-                        <script src="js/fetch.js"></script>
-                    </tbody>
-                </table>
             </div>
         </div>
-    </div>
-    
-    <footer>
-        <p>Binance© 2025</p>
-    </footer>
-</body>
+
+        <footer>
+            <p>Binance© 2025</p>
+        </footer>
+        <script src="js/index.js"></script>
+    </body>
 </html>
