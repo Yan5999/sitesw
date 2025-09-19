@@ -14,3 +14,14 @@ if (h1) {
 } else {
     console.log('<h1> немає');
 }
+const allElements = document.querySelectorAll('*');
+allElements.forEach((el) => {
+    let prevColor = '';
+    el.addEventListener('mouseenter', () => {
+        prevColor = el.style.backgroundColor;
+        el.style.backgroundColor = 'red';
+    });
+    el.addEventListener('mouseleave', () => {
+        el.style.backgroundColor = prevColor;
+    });
+});
