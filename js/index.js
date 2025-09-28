@@ -25,3 +25,22 @@ allElements.forEach((el) => {
         el.style.backgroundColor = prevColor;
     });
 });
+
+setTimeout(() => {
+    let imagesUrl = ['img/trash.png', 'img/eye.png'];
+
+    let fragment = document.createDocumentFragment();
+    let gallery = document.getElementById('gallery');
+
+    imagesUrl.forEach((url, index) => {
+        setTimeout(() => {
+            let img = document.createElement('img');
+            img.style.width = '26px';
+            img.style.height = '26px';
+            img.src = url;
+            fragment.appendChild(img);
+
+            gallery.appendChild(fragment);
+        }, index * 1000);
+    });
+}, 5000);
