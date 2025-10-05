@@ -62,3 +62,13 @@ document.querySelector('button').addEventListener('click', function () {
         alert('Некоректне введення! Перевірте email, телефон або логін.');
     }
 });
+
+document.querySelector('button').addEventListener('click', function () {
+    let login = document.getElementById('email').value;
+
+    let cleanedLogin = login.replace(/[^a-zA-Z0-9_-]/g, '');
+
+    document.getElementById('email').value = cleanedLogin;
+
+    alert('Очищений логін: ' + cleanedLogin);
+});
