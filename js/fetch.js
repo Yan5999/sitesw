@@ -1,61 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-   
+document.addEventListener('DOMContentLoaded', function () {
     async function fetchCryptoData() {
         try {
-
             const coinTable = document.querySelector('.coin-table tbody');
             if (coinTable) {
-                coinTable.innerHTML = '<tr><td colspan="3" style="text-align: center;">Завантаження даних...</td></tr>';
+                coinTable.innerHTML =
+                    '<tr><td colspan="3" style="text-align: center;">Завантаження даних...</td></tr>';
             }
 
-           
-            const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=24h');
-            
-         
+            const response = await fetch(
+                'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false&price_change_percentage=24h'
+            );
+
             if (!response.ok) {
                 throw new Error(`HTTP помилка! Статус: ${response.status}`);
             }
-            
+
             const data = await response.json();
             console.log('Отримані дані:', data);
-            
-          
+
             updateCoinTable(data);
-            
         } catch (error) {
             console.error('Помилка при отриманні даних:', error);
             showErrorMessage(error);
         }
     }
-    
 
     function updateCoinTable(data) {
         const coinTable = document.querySelector('.coin-table tbody');
         if (!coinTable) return;
-        
-       
+
         coinTable.innerHTML = '';
-    
-        data.forEach(coin => {
-            
-            const priceChangeClass = coin.price_change_percentage_24h >= 0 ? 'positive' : 'negative';
-            const priceChangeFormatted = coin.price_change_percentage_24h.toFixed(2);
-            
-        
+
+        data.forEach((coin) => {
+            const priceChangeClass =
+                coin.price_change_percentage_24h >= 0 ? 'positive' : 'negative';
+            const priceChangeFormatted =
+                coin.price_change_percentage_24h.toFixed(2);
+
             const priceFormatted = new Intl.NumberFormat('en-US', {
                 style: 'currency',
-                currency: 'USD'
+                currency: 'USD',
             }).format(coin.current_price);
-            
-          
+
             const row = document.createElement('tr');
             row.className = 'coin-row';
-            
+
             row.innerHTML = `
                 <td class="coin-cell">
                     <div class="coin-name">
                         <div class="coin-icon">
-                            <img src="${coin.image}" alt="${coin.symbol.toUpperCase()}">
+                            <img src="${
+                                coin.image
+                            }" alt="${coin.symbol.toUpperCase()}">
                         </div>
                         <span class="coin-symbol">${coin.symbol.toUpperCase()}</span>
                         <span class="coin-fullname">${coin.name}</span>
@@ -68,15 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="coin-change ${priceChangeClass}">${priceChangeFormatted}%</div>
                 </td>
             `;
-            
+
             coinTable.appendChild(row);
         });
-        
-  
+
         addRefreshButton();
     }
-    
-   
+
     function showErrorMessage(error) {
         const coinTable = document.querySelector('.coin-table tbody');
         if (coinTable) {
@@ -99,17 +93,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                 </tr>
             `;
-            
-         
-            document.getElementById('retry-btn').addEventListener('click', fetchCryptoData);
+
+            document
+                .getElementById('retry-btn')
+                .addEventListener('click', fetchCryptoData);
         }
     }
-    
- 
+
     function addRefreshButton() {
-   
         if (document.getElementById('refresh-btn')) return;
-        
+
         const tabsContainer = document.querySelector('.tabs');
         if (tabsContainer) {
             const refreshBtn = document.createElement('button');
@@ -124,48 +117,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 margin-left: 188px;
                 transition: transform 0.3s;
             `;
-            
+
             refreshBtn.addEventListener('mouseover', () => {
                 refreshBtn.style.transform = 'rotate(180deg)';
             });
-            
+
             refreshBtn.addEventListener('mouseout', () => {
                 refreshBtn.style.transform = 'rotate(0)';
             });
-            
+
             refreshBtn.addEventListener('click', () => {
-                
                 refreshBtn.style.transition = 'transform 0.5s';
                 refreshBtn.style.transform = 'rotate(360deg)';
-                
-             
+
                 fetchCryptoData();
-                
-                
+
                 setTimeout(() => {
                     refreshBtn.style.transform = 'rotate(0)';
                 }, 500);
             });
-            
-            
+
             tabsContainer.appendChild(refreshBtn);
         }
     }
-    
-  
+
     fetchCryptoData();
-    
-    
-    document.querySelectorAll('.tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-          
-            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-            
-            
+
+    document.querySelectorAll('.tab').forEach((tab) => {
+        tab.addEventListener('click', function () {
+            document
+                .querySelectorAll('.tab')
+                .forEach((t) => t.classList.remove('active'));
+
             this.classList.add('active');
-            
         });
     });
-    
-    
 });
